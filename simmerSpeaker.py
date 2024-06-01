@@ -26,7 +26,6 @@ with open('codeSpeaker.txt', 'r') as file:
 
 # Generate complete command 
 speaker_cmd = (cmd_prefix + port + "/streamRedirections/monitoring/deviceId/" + code).strip()
-print(speaker_cmd)
 
 # Runs the command using subprocess.Popen
 activate_speaker = subprocess.Popen(speaker_cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
