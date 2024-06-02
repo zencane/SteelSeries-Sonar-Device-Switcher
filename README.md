@@ -21,4 +21,4 @@ To do this you can right click on the python file and add it as a shortcut to th
 I've had this sound switch solution for a while but when I switched to SteelSeries Sonar for my sound management, I needed to revamp it and make it compatible with the SteelSeries Sonar API.
 
 ## How does it work?
-By using buttons on your taskbar you can quickly switch between two audio devices. The script makes use of the local Sonar API. 
+The script makes use of the local Sonar API and curl commands!
