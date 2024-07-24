@@ -3,11 +3,10 @@ A way to switch sound devices on SteelSeries Sonar
 
 ## How do I set it up?
 You'll need to acquire the device ID for the devices you want - these change if you update their drivers so you may need to re-do this step once a month or how frequently you update drivers. 
-You can do this by using the Wireshark - Choose the "Adapter for loopback traffic capture" and start monitoring. Open the Mixer tab in Sonar (streamer mode enabled) and toggle between the two devices a couple times.
-![image](https://github.com/zencane/SteelSeries-Sonar-Device-Switcher/assets/141449041/d52839d1-3e6f-49bc-a0ec-7123faf3473a)
 
-Stop the wireshark capture and scroll until you find a line that resembles this ![image](https://github.com/zencane/SteelSeries-Sonar-Device-Switcher/assets/141449041/c0f4b54f-25d8-4bbb-8a69-fe07d3154d4e)
-The text after "deviceID/" until " HTTP/1.1" is what you're looking for. Type this into codeHeadset.txt. Find another similar line and type the deviceID you find into codeSpeaker.txt.
+Simply go to Sonar and set the device you want to be known as speaker then run DeviceID/deviceIdUpdateSpeaker.py, and then set the device to headset and run DeviceID/deviceIdUpdateHeadset.py
+
+This will update the text files within DeviceID which can be used by the python files to change devices.
 
 Run each python file and you should be able to see that the devices are switching between each other.
 
