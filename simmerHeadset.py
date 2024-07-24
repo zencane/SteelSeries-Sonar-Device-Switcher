@@ -25,7 +25,7 @@ with open('codeHeadset.txt', 'r') as file:
     code = file.read()
 
 # Generate complete command 
-headset_cmd = (cmd_prefix + port + "/streamRedirections/monitoring/deviceId/" + code).strip()
+headset_cmd = (cmd_prefix + port + "/streamRedirections/monitoring/deviceId/%7B0.0.0.00000000%7D.%7B" + code + "%7D").strip()
 
 # Runs the command using subprocess.Popen
 activate_headset = subprocess.Popen(headset_cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
