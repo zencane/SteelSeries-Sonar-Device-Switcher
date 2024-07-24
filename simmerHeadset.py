@@ -21,7 +21,7 @@ cmd_prefix = """
 curl -d '{"event":"Element Clicked","properties":{"screen_name":"mixer","mode":"stream","role":"master","current_panel":"standard","element_name":"sonar_switch_master_panel","element_type":"button"}' -H "Content-Type: application/json" -X PUT """
 
 # Gets the device ID from the text file
-with open('codeHeadset.txt', 'r') as file:
+with open('DeviceID//deviceIdHeadset.txt', 'r') as file:
     code = file.read()
 
 # Generate complete command 
