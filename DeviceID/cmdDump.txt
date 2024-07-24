@@ -1,0 +1,12 @@
+  TCP    127.0.0.1:6327         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:6328         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:6463         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:27015        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49750        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49774        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49779        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49782        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49938        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:56433        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:57831        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        0.0.0.0:0              LISTENING
