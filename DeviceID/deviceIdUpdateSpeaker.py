@@ -14,7 +14,6 @@ if stderr:
 else:
     output = open('cmdDump.txt', 'r').read()
     ports = []
-
     # Regular expression pattern to match IP and port
     pattern = re.compile(r'127\.0\.0\.\d+:(\d+)')
 
@@ -31,7 +30,7 @@ for port in ports:
     # Define your command as a string
     # Use subprocess.run() to execute the command
     try:
-        result = subprocess.run(cmd_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+        result = subprocess.run(cmd_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=3)
         json_string = str(result.stdout)
         # Parse the JSON string into a Python dictionary
         data = json.loads(json_string)
@@ -40,11 +39,13 @@ for port in ports:
         pattern = r'\{[0-9a-fA-F:.]+\}\.\{([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\}'
         match = re.search(pattern, deviceId)
         if match:
+            print("matched")
             correctId = match.group(1)
             with open('deviceIdSpeaker.txt', 'w') as file:
                 file.write(correctId)
         break
     except:
+        print("except")
         pass
 
 x = input("press enter to exit.")
