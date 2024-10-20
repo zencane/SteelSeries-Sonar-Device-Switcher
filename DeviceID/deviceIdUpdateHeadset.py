@@ -31,9 +31,8 @@ for port in ports:
     # Define your command as a string
     # Use subprocess.run() to execute the command
     try:
-        result = subprocess.run(cmd_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+        result = subprocess.run(cmd_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True, timeout=3)
         json_string = str(result.stdout)
-        
         # Parse the JSON string into a Python dictionary
         data = json.loads(json_string)
         # Extract the value
